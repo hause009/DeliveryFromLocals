@@ -34,6 +34,7 @@ class CitiesViewController: UIViewController {
             vc.nameString = "Ekaterinburg"
         }
     }
+    //
     
     @IBAction func pressButtonMoscov(_ sender: AnyObject) {
 
