@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		C2C6099D1DA2C6B2005A5805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C6099C1DA2C6B2005A5805 /* AppDelegate.swift */; };
-		C2C6099F1DA2C6B2005A5805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C6099E1DA2C6B2005A5805 /* ViewController.swift */; };
+		C2C6099F1DA2C6B2005A5805 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C6099E1DA2C6B2005A5805 /* CitiesViewController.swift */; };
 		C2C609A21DA2C6B2005A5805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C609A01DA2C6B2005A5805 /* Main.storyboard */; };
 		C2C609A41DA2C6B2005A5805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C609A31DA2C6B2005A5805 /* Assets.xcassets */; };
 		C2C609A71DA2C6B2005A5805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C609A51DA2C6B2005A5805 /* LaunchScreen.storyboard */; };
+		C2C609AF1DA2C797005A5805 /* CategoryVeiwControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C609AE1DA2C797005A5805 /* CategoryVeiwControler.swift */; };
+		C2C609B11DA2C804005A5805 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C609B01DA2C804005A5805 /* FoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C2C609991DA2C6B1005A5805 /* DeliveryFromLocals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryFromLocals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C6099C1DA2C6B2005A5805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2C6099E1DA2C6B2005A5805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2C6099E1DA2C6B2005A5805 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		C2C609A11DA2C6B2005A5805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2C609A31DA2C6B2005A5805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C609A61DA2C6B2005A5805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C609A81DA2C6B2005A5805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C609AE1DA2C797005A5805 /* CategoryVeiwControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVeiwControler.swift; sourceTree = "<group>"; };
+		C2C609B01DA2C804005A5805 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				C2C6099C1DA2C6B2005A5805 /* AppDelegate.swift */,
-				C2C6099E1DA2C6B2005A5805 /* ViewController.swift */,
+				C2C6099E1DA2C6B2005A5805 /* CitiesViewController.swift */,
 				C2C609A01DA2C6B2005A5805 /* Main.storyboard */,
+				C2C609B01DA2C804005A5805 /* FoodViewController.swift */,
+				C2C609AE1DA2C797005A5805 /* CategoryVeiwControler.swift */,
 				C2C609A31DA2C6B2005A5805 /* Assets.xcassets */,
 				C2C609A51DA2C6B2005A5805 /* LaunchScreen.storyboard */,
 				C2C609A81DA2C6B2005A5805 /* Info.plist */,
@@ -96,6 +102,7 @@
 				TargetAttributes = {
 					C2C609981DA2C6B1005A5805 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -135,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C6099F1DA2C6B2005A5805 /* ViewController.swift in Sources */,
+				C2C6099F1DA2C6B2005A5805 /* CitiesViewController.swift in Sources */,
 				C2C6099D1DA2C6B2005A5805 /* AppDelegate.swift in Sources */,
+				C2C609B11DA2C804005A5805 /* FoodViewController.swift in Sources */,
+				C2C609AF1DA2C797005A5805 /* CategoryVeiwControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +260,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculatorDemo.DeliveryFromLocals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,6 +272,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculatorDemo.DeliveryFromLocals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -284,6 +295,7 @@
 				C2C609AD1DA2C6B2005A5805 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

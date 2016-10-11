@@ -1,25 +1,231 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L7B-1T-KYQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CitiesViewController" customModule="DeliveryFromLocals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvc-4M-9bP">
+                                <frame key="frameInset" minX="20" minY="436" width="100" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Act-ha-3Kr"/>
+                                    <constraint firstAttribute="width" constant="100" id="gvE-RY-exf"/>
+                                </constraints>
+                                <state key="normal" title="Екатеринбург">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonEkaterinburg:" destination="BYZ-38-t0r" eventType="touchDown" id="oIE-ha-QID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEd-uB-GuG">
+                                <frame key="frameInset" minX="248" minY="72" width="123" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="0r9-GK-Dhu"/>
+                                    <constraint firstAttribute="width" constant="100" id="pSJ-H0-h5m"/>
+                                </constraints>
+                                <state key="normal" title="Санкт Петербург">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nUV-Un-5zo" kind="show" identifier="SegueToSpb" id="7Rk-at-Iab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-r7-Xxf">
+                                <frame key="frameInset" minX="259" minY="487" width="100" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="86O-gW-hYG"/>
+                                    <constraint firstAttribute="height" constant="160" id="PnZ-Zr-QOo"/>
+                                </constraints>
+                                <state key="normal" title="Казань">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonKazan:" destination="BYZ-38-t0r" eventType="touchDown" id="iWT-Rv-1qW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnI-KU-7ui">
+                                <frame key="frameInset" minX="16" minY="72" width="100" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="M3x-GN-8g9"/>
+                                    <constraint firstAttribute="width" constant="100" id="fhw-zY-gGc"/>
+                                </constraints>
+                                <state key="normal" title="Москва">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonMoscov:" destination="BYZ-38-t0r" eventType="touchUpInside" id="diK-Ae-Rrp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pBX-r7-Xxf" secondAttribute="bottom" constant="8" id="3fi-Tc-DwP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEd-uB-GuG" secondAttribute="trailing" id="4s8-2i-1Q2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yvc-4M-9bP" secondAttribute="bottom" constant="8" id="IhF-Zj-FAY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Yvc-4M-9bP" secondAttribute="leading" id="VBN-Jg-mMZ"/>
+                            <constraint firstItem="bEd-uB-GuG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XPQ-oe-Vvw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBX-r7-Xxf" secondAttribute="trailing" id="bdg-KV-izs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KnI-KU-7ui" secondAttribute="leading" id="fay-72-fkL"/>
+                            <constraint firstItem="KnI-KU-7ui" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-6" id="n6n-Ja-9Zg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zVd-nU-KU2"/>
+                    <connections>
+                        <segue destination="nUV-Un-5zo" kind="show" identifier="SegueToMoscov" id="MQR-Do-KlF"/>
+                        <segue destination="nUV-Un-5zo" kind="show" identifier="SegueToKazan" id="eLN-Z7-sJf"/>
+                        <segue destination="nUV-Un-5zo" kind="show" identifier="SegueToEkaterinburg" id="twa-RQ-6Kk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="923" y="144"/>
+        </scene>
+        <!--Category Veiw Controler-->
+        <scene sceneID="vY7-9p-dqr">
+            <objects>
+                <viewController id="nUV-Un-5zo" customClass="CategoryVeiwControler" customModule="DeliveryFromLocals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMB-iw-Ybq"/>
+                        <viewControllerLayoutGuide type="bottom" id="oyG-ZT-3I4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TYR-NS-rUY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8J-lk-VeK">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kz-zd-rWh">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Q-uk-9sf">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmz-TG-kIM">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="exS-Pp-xwq" kind="show" id="sFd-zS-V0c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pmz-TG-kIM" firstAttribute="leading" secondItem="v9Q-uk-9sf" secondAttribute="trailing" constant="26" id="6JI-sT-djQ"/>
+                            <constraint firstItem="4Kz-zd-rWh" firstAttribute="leading" secondItem="Z8J-lk-VeK" secondAttribute="trailing" constant="25" id="LW4-3G-moY"/>
+                            <constraint firstItem="v9Q-uk-9sf" firstAttribute="top" secondItem="aMB-iw-Ybq" secondAttribute="bottom" constant="114" id="LYN-SE-rXr"/>
+                            <constraint firstItem="4Kz-zd-rWh" firstAttribute="top" secondItem="aMB-iw-Ybq" secondAttribute="bottom" constant="114" id="VFE-uO-6fR"/>
+                            <constraint firstItem="Z8J-lk-VeK" firstAttribute="leading" secondItem="TYR-NS-rUY" secondAttribute="leadingMargin" id="Xin-Zh-e4p"/>
+                            <constraint firstItem="4Kz-zd-rWh" firstAttribute="leading" secondItem="Z8J-lk-VeK" secondAttribute="trailing" constant="10" id="azd-n1-cwa"/>
+                            <constraint firstItem="Z8J-lk-VeK" firstAttribute="top" secondItem="aMB-iw-Ybq" secondAttribute="bottom" constant="114" id="dLf-bM-Oaf"/>
+                            <constraint firstItem="pmz-TG-kIM" firstAttribute="leading" secondItem="v9Q-uk-9sf" secondAttribute="trailing" constant="26" id="ewI-8Z-8o7"/>
+                            <constraint firstItem="v9Q-uk-9sf" firstAttribute="leading" secondItem="4Kz-zd-rWh" secondAttribute="trailing" constant="25" id="mLn-hR-Vmm"/>
+                            <constraint firstItem="pmz-TG-kIM" firstAttribute="top" secondItem="aMB-iw-Ybq" secondAttribute="bottom" constant="114" id="yzW-3J-nji"/>
+                            <constraint firstItem="v9Q-uk-9sf" firstAttribute="leading" secondItem="4Kz-zd-rWh" secondAttribute="trailing" constant="25" id="zza-T6-Mjf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="azd-n1-cwa"/>
+                                <exclude reference="ewI-8Z-8o7"/>
+                                <exclude reference="mLn-hR-Vmm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fac-3M-6vY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twQ-1K-Q0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="143"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="HoE-P5-MZZ">
+            <objects>
+                <viewController id="exS-Pp-xwq" customClass="FoodViewController" customModule="DeliveryFromLocals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWF-4u-hiy"/>
+                        <viewControllerLayoutGuide type="bottom" id="XeB-9t-eKw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R6a-RB-vEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7X7-6S-xMM">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-99-idA">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-dj-K3i">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="GyB-OS-6VX"/>
+                                    <constraint firstAttribute="width" constant="339" id="TBm-Mo-3Pf"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="A1e-99-idA" secondAttribute="trailing" id="390-RJ-5ca"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7X7-6S-xMM" secondAttribute="leading" constant="-4" id="4zo-xJ-oY0"/>
+                            <constraint firstItem="A1e-99-idA" firstAttribute="top" secondItem="7X7-6S-xMM" secondAttribute="bottom" constant="8" id="8Zu-Zz-kgR"/>
+                            <constraint firstItem="XeB-9t-eKw" firstAttribute="top" secondItem="zAn-dj-K3i" secondAttribute="bottom" constant="140" id="9ZB-Pt-wr9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A1e-99-idA" secondAttribute="trailing" id="JxC-l8-Aub"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7X7-6S-xMM" secondAttribute="trailing" id="RbO-cg-kPP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7X7-6S-xMM" secondAttribute="trailing" id="RmA-2Z-iSE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="A1e-99-idA" secondAttribute="leading" constant="-4" id="TO6-uf-TZr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zAn-dj-K3i" secondAttribute="trailing" id="eKi-L1-bqO"/>
+                            <constraint firstItem="7X7-6S-xMM" firstAttribute="top" secondItem="PWF-4u-hiy" secondAttribute="bottom" constant="8" id="idZ-jW-Wms"/>
+                            <constraint firstItem="zAn-dj-K3i" firstAttribute="top" secondItem="A1e-99-idA" secondAttribute="bottom" constant="8" id="tby-aQ-SQz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zAn-dj-K3i" secondAttribute="leading" constant="-4" id="zXe-SK-LCp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWH-7n-6qW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652" y="142.57871064467767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qSm-Oy-Yfy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L7B-1T-KYQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sPv-2n-x0F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F6B-xD-rdl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQs-j5-KDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eLN-Z7-sJf"/>
+    </inferredMetricsTieBreakers>
 </document>
